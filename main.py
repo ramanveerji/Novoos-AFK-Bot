@@ -36,15 +36,11 @@ app = Client(name="NoovosAFKBot",api_id=API_ID,api_hash=API_HASH,session_string=
 
 
 def is_afk():
-    if str(r.get(name="AFK"),"UTF-8")=="True":
-        return True
-    else:
-        return False
+    return str(r.get(name="AFK"),"UTF-8") == "True"
 
 
 def get_reason():
-    reason = str(r.get(name="REASON"),"UTF-8")
-    return reason
+    return str(r.get(name="REASON"),"UTF-8")
 
 
 def set_reason(reason):
